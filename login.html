@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-In Account</title>
+    <link rel="stylesheet" href="from.css">
+    <link rel="stylesheet" href="index.html">
+    <style>
+      #overlay {
+  position: fixed;
+ margin-left: 300px;
+ margin-top: 200px;
+   display: block;
+  width: 40%;
+  height: 50%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(5, 170, 235);
+  z-index: 2;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: none;
+}
+#emailError , #passError{
+  margin:  10px 0;
+  color: rgb(255, 52, 45);
+  display: none;
+}
+    </style>
+</head>
+<body>
+  <div id="overlay" onclick="off()">
+    Login Success
+    <button onclick="clickOk()">Ok</button>
+  </div>
+  <section class='login' id='login'>
+    <div class='head'>
+    <h1 class='company'>Electronistan</h1>
+    </div>
+    <p class='msg'>Welcome back</p>
+    <div class='form'>
+      <form>
+    <input type="text" placeholder='Username' class='text' id='username' required><br>
+    <span  id="emailError">Email is incorrect </span><br>
+    <input type="password" placeholder='••••••••••••••' class='password' id='password'><br>
+    <span  id="passError">Password is incorrect </span><br>
+    <a href="#" class='btn-login' id='do-login'>Login</a>
+      </form>
+    </div>
+  </section>
+  
+</body>
+<script src="login.js"></script>
+<!-- <script src="script.js"></script> -->
+</html>
